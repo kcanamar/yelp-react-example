@@ -63,6 +63,15 @@ function App() {
   
   const loading = () => <h1>Loading...</h1>
 
+  const Item = ({item}) => {
+    return (
+      <div>
+        <h1>{item.name}</h1>
+        <p onClick={() => {handleItem(item.id)}}>{item.id}</p>
+      </div>
+    )
+  }
+
   console.log(solo)
   return (
     <div className="App">
@@ -70,8 +79,7 @@ function App() {
       items ? 
         items.map((item, idx) => {
           return <div key={idx}>
-            <h1>{item.name}</h1>
-            <p onClick={() => {handleItem(item.id)}}>{item.id}</p>
+              <Item item={item}/>    
           </div>
         })
       : 
