@@ -8,7 +8,7 @@ function App() {
   // prefix the url with https://cors-anywhere.herokuapp.com/
   // be sure to visit https://cors-anywhere.herokuapp.com/corsdemo to request temporary access
   const url = process.env.REACT_APP_URL;
-  console.log({apiKey, url})
+
   const options = {
     method: 'GET',
     headers: {
